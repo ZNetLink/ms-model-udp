@@ -45,7 +45,7 @@ class UdpHeader:
     Checksum: int
 
 
-@ms.process_model("udp", begin="Wait")
+@ms.process_model("udp")
 class UdpProcess:
     def __init__(self) -> None:
         self.my_module: Optional[SimObj] = None
@@ -79,7 +79,7 @@ class UdpProcess:
         return True
 
     # --------------------------------------------------------------- States --
-    @ms.state_enter("Wait")
+    @ms.state_enter("Wait", begin=True)
     def enter_wait(self) -> None:
         module = ms.self_obj()
         if module is None:
