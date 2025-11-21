@@ -33,9 +33,9 @@
         ],
         "metrics": [
             {
-                "name": "GenericWireless",
-                "desc": "通用无线MAC层模型全部",
-                "pattern": "Generic Wireless.*"
+                "name": "全部UDP",
+                "desc": "全部UDP统计量",
+                "pattern": "UDP.*"
             }
         ]
     }

@@ -490,10 +490,10 @@ class UdpProcess:
             total_captures=100,
             agg=ms.StatAgg.SUM_PER_TIME
         )
-        self._stats_handle_recv_bps = ms.register_stat("udp.<plt_name>.<device_name>.recv_bps", mode)
-        self._stats_handle_send_bps = ms.register_stat("udp.<plt_name>.<device_name>.sent_bps", mode)
-        self._stats_handle_recv_pps = ms.register_stat("udp.<plt_name>.<device_name>.recv_pps", mode)
-        self._stats_handle_send_pps = ms.register_stat("udp.<plt_name>.<device_name>.send_pps", mode)
+        self._stats_handle_recv_bps = ms.register_stat("UDP.<plt_name>.<device_name>.recv_bps", mode)
+        self._stats_handle_send_bps = ms.register_stat("UDP.<plt_name>.<device_name>.sent_bps", mode)
+        self._stats_handle_recv_pps = ms.register_stat("UDP.<plt_name>.<device_name>.recv_pps", mode)
+        self._stats_handle_send_pps = ms.register_stat("UDP.<plt_name>.<device_name>.send_pps", mode)
 
 
 
