@@ -1,0 +1,151 @@
+{
+  "kind": "python",
+  "interface": {
+    "begsim_intrpt": true,
+    "endsim_intrpt": false,
+    "failure_intrpts": false,
+    "recovery_intrpts": false,
+    "priority": 0,
+    "super_priority": false
+  },
+  "attributes": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "c4e024a2-f2b9-47f4-ab39-27d541c81f23",
+        "name": "Init",
+        "mandatory": false,
+        "entryCreated": true,
+        "exitCreated": false,
+        "entryCode": "",
+        "exitCode": "",
+        "position": {
+          "x": 347.30402654748866,
+          "y": 181.8464924432318
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      {
+        "id": "c9045ad7-2afc-4417-8178-a19ec413c945",
+        "name": "Idle",
+        "mandatory": false,
+        "entryCreated": true,
+        "exitCreated": false,
+        "entryCode": "",
+        "exitCode": "",
+        "position": {
+          "x": 560,
+          "y": 181.8464924432318
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      {
+        "id": "81133103-c3c8-49df-ab23-039476d7d72e",
+        "name": "Wait",
+        "mandatory": false,
+        "entryCreated": true,
+        "exitCreated": false,
+        "entryCode": "",
+        "exitCode": "",
+        "position": {
+          "x": 148.03686169463174,
+          "y": 181.8464924432318
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "ce9b0ee4-bcd7-4f0a-bb01-59443b14858a",
+        "source": {
+          "x": 98.03686169463174,
+          "y": 229.8464924432318
+        },
+        "target": {
+          "cell": "81133103-c3c8-49df-ab23-039476d7d72e"
+        },
+        "condition": "",
+        "handlerCreated": false,
+        "connector": null,
+        "vertices": [],
+        "initialMarker": true
+      },
+      {
+        "id": "c60aae4d-01b0-4884-844b-fac9c6bdb77f",
+        "source": {
+          "cell": "81133103-c3c8-49df-ab23-039476d7d72e",
+          "selector": "> circle:nth-child(1)"
+        },
+        "target": {
+          "cell": "c4e024a2-f2b9-47f4-ab39-27d541c81f23"
+        },
+        "condition": "",
+        "handlerCreated": true,
+        "connector": "smooth",
+        "vertices": [],
+        "initialMarker": false
+      },
+      {
+        "id": "92353864-2543-49a3-905d-4dd0b8e6c0bc",
+        "source": {
+          "cell": "c4e024a2-f2b9-47f4-ab39-27d541c81f23",
+          "selector": "> circle:nth-child(1)"
+        },
+        "target": {
+          "cell": "c9045ad7-2afc-4417-8178-a19ec413c945"
+        },
+        "condition": "",
+        "handlerCreated": true,
+        "connector": "smooth",
+        "vertices": [],
+        "initialMarker": false
+      },
+      {
+        "id": "7b11ea08-2ff8-438e-ae15-464e02b0609b",
+        "source": {
+          "cell": "c9045ad7-2afc-4417-8178-a19ec413c945",
+          "selector": "> circle:nth-child(1)"
+        },
+        "target": {
+          "cell": "c9045ad7-2afc-4417-8178-a19ec413c945",
+          "selector": "> circle:nth-child(1)"
+        },
+        "condition": "",
+        "handlerCreated": true,
+        "connector": {
+          "name": "smooth"
+        },
+        "vertices": [
+          {
+            "x": 666,
+            "y": 176.8464924432318
+          },
+          {
+            "x": 714,
+            "y": 229.8464924432318
+          },
+          {
+            "x": 666,
+            "y": 282.8464924432318
+          }
+        ],
+        "initialMarker": false
+      }
+    ],
+    "initialStateId": "81133103-c3c8-49df-ab23-039476d7d72e"
+  },
+  "pythonPackageFiles": [
+    "README.md",
+    "pyproject.toml",
+    "src/udp/__init__.py"
+  ]
+}

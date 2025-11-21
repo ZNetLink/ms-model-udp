@@ -1,0 +1,42 @@
+{
+    "name": "ms-model-udp",
+    "repo_url": "https://github.com/znetlink/ms-model-udp",
+    "version": "0.1.0",
+    "description": "基础UDP模型",
+    "author": "ZNetLink",
+    "email": "jiazequn@znetlink.com",
+    "license": "GPL-3.0",
+    "labels": [
+        "Transport",
+        "传输层"
+    ],
+    "content": {
+        "iconLibraries": [],
+        "scenarios": [],
+        "platforms": [],
+        "devices": [],
+        "processes": [
+            {
+                "model": "models/udp.pr.m",
+                "pyPkgPath": "pycodes/udp"
+            }
+        ],
+        "links": [],
+        "traffics": [],
+        "modulations": [],
+        "packets": [
+            "models/udp_dgram.pkt.m"
+        ],
+        "icis": [
+            "models/udp_command.ici.m",
+            "models/udp_ind.ici.m"
+        ],
+        "metrics": [
+            {
+                "name": "GenericWireless",
+                "desc": "通用无线MAC层模型全部",
+                "pattern": "Generic Wireless.*"
+            }
+        ]
+    }
+}
