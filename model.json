@@ -1,7 +1,7 @@
 {
     "name": "ms-model-udp",
     "repo_url": "https://github.com/znetlink/ms-model-udp",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "基础UDP模型",
     "author": "ZNetLink",
     "email": "jiazequn@znetlink.com",

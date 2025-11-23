@@ -6,7 +6,7 @@ import miaosuan as ms
 from miaosuan.engine.engine import INTRPT_TYPE_REMOTE, INTRPT_TYPE_STRM, Stream
 from miaosuan.engine.simobj import SimObj
 from miaosuan.mms.process_registry import AttrType, pr_attr_set, pr_register
-from miaosuan_models_basic import ip as ip_models
+from ipv4 import ip_support
 
 logger = logging.getLogger(__name__)
 
@@ -453,9 +453,6 @@ class UdpProcess:
         return UDP_DYNAMIC_PORT_MIN
 
     def _resolve_ip_module(self) -> Optional[SimObj]:
-        if ip_models is None:
-            return None
-
         module = self.my_module
         if module is None:
             return None
@@ -465,21 +462,14 @@ class UdpProcess:
             return None
 
         try:
-            return ip_models.find_node_ip_module(parent)
+            return ip_support.find_node_ip_module(parent)
         except Exception as exc:
             logger.warning("UDP: failed to resolve IP module via helper: %s", exc)
             return None
 
     def _register_protocol_with_ip(self) -> None:
-        if ip_models is None:
-            return
-
-        register = getattr(ip_models, "register_protocol", None)
-        if not callable(register):
-            return
-
         try:
-            register(IP_PROTOCOL_UDP, "udp", self.stream_to_ip_obj, self.stream_from_ip_obj)
+            ip_support.register_protocol(IP_PROTOCOL_UDP, "udp", self.stream_to_ip_obj, self.stream_from_ip_obj)
         except Exception as exc:
             logger.warning("UDP: failed to register protocol with IP: %s", exc)
 
