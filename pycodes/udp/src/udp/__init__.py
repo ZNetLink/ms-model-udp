@@ -66,15 +66,15 @@ class UdpProcess:
         self._stats_handle_recv_bps: ms.StatHandle = None
         self._stats_handle_send_bps: ms.StatHandle = None
 
-    @ms.transition("Wait", "Init")
+    @ms.transition("Wait", "Init", "c60aae4d-01b0-4884-844b-fac9c6bdb77f")
     def from_wait_to_init(self):
         return True
 
-    @ms.transition("Init", "Idle")
+    @ms.transition("Init", "Idle", "92353864-2543-49a3-905d-4dd0b8e6c0bc")
     def from_init_to_idle(self):
         return True
 
-    @ms.transition("Idle", "Idle")
+    @ms.transition("Idle", "Idle", "7b11ea08-2ff8-438e-ae15-464e02b0609b")
     def from_idle_to_idle(self):
         return True
 
